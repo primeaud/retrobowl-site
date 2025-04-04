@@ -1,31 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Retro Bowl Classic</title>
-    <style>
-      html, body {
-        margin: 0;
-        padding: 0;
-        background-color: black;
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Bowl | Alexx743</title>
+  <link rel="shortcut icon" href="retro bowl.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    h2 {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .topnav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .divbutton {
+      padding: 10px 20px;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #facc15;
+      color: black;
+      font-weight: bold;
+    }
+    .retro-bowl-iframe {
+      display: block;
+      margin: 0 auto;
+      width: 960px;
+      height: 540px;
+      border: none;
+      border-radius: 12px;
+    }
+    .fullscreen {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      background-color: #22c55e;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Retro Bowl</h2>
+
+  <div class="topnav">
+    <a href="games.html"><button class="divbutton">Games</button></a>
+    <a href="Apps.html"><button class="divbutton">Apps</button></a>
+    <a href="index.html"><button class="divbutton">Home</button></a>
+    <a href="shooter.html"><button class="divbutton">Shooter</button></a>
+    <a href="sports.html"><button class="divbutton">Sports</button></a>
+    <a href="cars.html"><button class="divbutton">Cars</button></a>
+  </div>
+
+  <iframe
+    src="https://retro-bowl-six.vercel.app"
+    class="retro-bowl-iframe"
+    title="Retro Bowl"
+    allowfullscreen
+  ></iframe>
+
+  <button class="fullscreen" onclick="fullscreenGame()">
+    Fullscreen
+  </button>
+
+  <script>
+    function fullscreenGame() {
+      const iframe = document.querySelector("iframe");
+      iframe.style.border = "none";
+      iframe.style.outline = "none";
+      iframe.style.width = "100vw";
+      iframe.style.height = "100vh";
+      iframe.style.position = "fixed";
+      iframe.style.left = 0;
+      iframe.style.top = 0;
+      iframe.style.zIndex = 9999;
+    }
+  </script>
+
+  <script>
+    // Stealth redirect if user presses backtick `
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "`") {
+        window.parent.location.replace("https://google.com/");
       }
-      iframe {
-        border: none;
-        width: 100vw;
-        height: 100vh;
-        display: block;
-      }
-    </style>
-  </head>
-  <body>
-    <iframe
-      src="https://retro-bowl-six.vercel.app"
-      title="Retro Bowl"
-      allowfullscreen
-    ></iframe>
-  </body>
+    });
+  </script>
+
+</body>
 </html>
