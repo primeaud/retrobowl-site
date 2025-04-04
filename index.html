@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RetroBowl Classic</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        font-size: 1.1rem;
+        color: #ccc;
+      }
+      iframe {
+        width: 100%;
+        max-width: 960px;
+        height: 540px;
+        border: none;
+        border-radius: 16px;
+        margin-top: 20px;
+      }
+      .button-group {
+        margin-top: 30px;
+        display: flex;
+        gap: 16px;
+      }
+      a.button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        color: black;
+        background-color: #facc15;
+        font-weight: bold;
+        transition: background-color 0.2s ease;
+      }
+      a.button.secondary {
+        background-color: #ddd;
+      }
+      section {
+        margin-top: 60px;
+        max-width: 700px;
+        text-align: center;
+      }
+      footer {
+        margin-top: 80px;
+        font-size: 0.9rem;
+        color: #777;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>RetroBowl Classic</h1>
+      <p>Play our RetroBowl clone online, free and uninterrupted!</p>
+    </header>
+
+    <iframe src="retrobowl/production.html" title="RetroBowl Clone Game" allowfullscreen></iframe>
+
+    <div class="button-group">
+      <a href="#how-to-play" class="button">How to Play →</a>
+      <a href="#tips" class="button secondary">Tips & Tricks</a>
+    </div>
+
+    <section id="how-to-play">
+      <h2>How to Play</h2>
+      <p>
+        Use your mouse or keyboard to interact with the game. Manage your team, draft new players, and lead your squad to glory!
+      </p>
+    </section>
+
+    <section id="tips">
+      <h2>Tips & Tricks</h2>
+      <p>
+        Invest early in offense, balance your team chemistry, and learn to master the passing game to win consistently.
+      </p>
+    </section>
+
+    <footer>
+      © 2025 RetroBowl Classic Clone. Not affiliated with New Star Games.
+    </footer>
+  </body>
+</html>
